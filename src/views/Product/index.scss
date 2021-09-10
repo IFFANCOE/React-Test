@@ -1,14 +1,30 @@
-.ant-card-cover{
-    display: flex;
-    justify-content: center;
-    
+.card-item {
+  display: flex;
+  justify-content: center;
 }
 
 .pagination-card {
-    padding-bottom: 2rem;
-    padding-top: 1rem;
-  }
-  
-  .page-link {
-    margin: 10px;
-  }
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.page-link {
+  margin: 10px;
+}
+
+.contarner {
+  width:98%;
+}
+.card-item {
+  margin-top: 2%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+// input
+// .ant-input {
+//   font-size:'50%' !important;
+ 
+// }

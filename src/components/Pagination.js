@@ -7,7 +7,7 @@ const PaginationCard = ({ productsPerPage, totalProducts, paginate }) => {
 
 
 
-    for (var i = 1; i <= Math.ceil(totalProducts / productsPerPage); i++) {
+    for (let i = 1; i <= Math.ceil(totalProducts / productsPerPage); i++) {
         pageNumbers.push(i)
 
     }
