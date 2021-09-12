@@ -4,6 +4,21 @@
   box-sizing: border-box;
 }
 
+.top-background {
+  height: 64px;
+  padding: 0 50px;
+  line-height: 64px;
+  transition: all 0.2s ease-in-out;
+  color: #f5f8fa;
+  background: #002766;
+  display: flex;
+  justify-content: space-between;
+  &:hover {
+    color: #ff0b0b;
+    cursor: pointer;
+  }
+}
+
 
 .pagination-card {
   padding-bottom: 2rem;
@@ -25,7 +40,6 @@
   display: flex;
   justify-content: start;
   flex-wrap: wrap;
-
 }
 // input
 .ant-input {
@@ -34,24 +48,11 @@
   margin-top: 1% !important;
 }
 
-.ant-layout-header {
-  color: beige !important;
-}
 
-// .autocomplete{
-//  display: flex;
-//  flex-direction: column;
-//  justify-content: center;
-//  outline: 1px solid red ;
-// }
-
-h3, p {
+h3,
+p {
   margin: 0;
-  padding-bottom: .5em;
-}
-
-h3 {
-  font-size: 1.2em;
+  padding-bottom: 0.5em;
 }
 
 p {
@@ -64,17 +65,16 @@ p {
   border-radius: 10px;
   color: #2f3640;
   margin: 20px 3em;
-  transition: all linear .2s;
-  width: 250px;
+  transition: all linear 0.2s;
+  width: 25%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
 }
 
 .product-card:hover,
 .product-card:active {
-  box-shadow: .2em .5em .5em rgba(0, 0, 0, 0.4);
+  box-shadow: 0.2em 0.5em 0.5em rgba(0, 0, 0, 0.4);
   transform: scale(1.1);
 }
 
@@ -85,21 +85,17 @@ p {
   background-position: center;
   display: flex;
   justify-content: center;
-
 }
 
 /* color */
- h3 {
+h3 {
   color: #0481b3 !important;
-  margin-top: 15% !important;
-  padding: 10%;
-
+  padding: 5%;
+  font-size: 1.2em;
 }
-p{
-  padding: 10%;
+p {
+  padding: 8%;
 }
-// .product-card:nth-child(2) h3 {
-//   color: #aa0000;
 
 .loading {
   margin: 20px 0;

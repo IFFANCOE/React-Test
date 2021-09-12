@@ -2,9 +2,6 @@
 import 'antd/dist/antd.css';
 import { Spin } from 'antd';
 const ProductList = ({ products, filterProducts, loading }) => {
-
-    // console.log(loading);
-
     if (loading) {
         return (
             <div className="loading">
@@ -12,7 +9,6 @@ const ProductList = ({ products, filterProducts, loading }) => {
             </div>
         )
     }
-    // console.log(filterProducts);
     return (
 
         <div className="list-group">
