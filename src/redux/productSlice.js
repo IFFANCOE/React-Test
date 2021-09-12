@@ -17,10 +17,10 @@ const productsSlices = createSlice({
     reducers:{},
     extraReducers:{
         [getProductsAsync.pending]: (state,action) =>{
-            console.log('get data...');
+            // console.log('get data...');
         },
         [getProductsAsync.fulfilled]: (state,action) =>{
-            console.log('get data successfully!... ',action.payload.products)
+            // console.log('get data successfully!... ',action.payload.products)
             return action.payload.products
         }
     }

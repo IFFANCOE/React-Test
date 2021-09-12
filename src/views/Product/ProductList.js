@@ -1,37 +1,42 @@
-import React from 'react'
+// import React, { useState } from 'react'
 import 'antd/dist/antd.css';
-import { Card } from 'antd';
-const { Meta } = Card;
+import { Spin } from 'antd';
+const ProductList = ({ products, filterProducts, loading }) => {
 
-const ProductList = ({ products, loading }) => {
+    // console.log(loading);
 
     if (loading) {
-        return <h2>loading...</h2>
+        return (
+            <div className="loading">
+                <Spin size= 'large' />
+            </div>
+        )
     }
+    // console.log(filterProducts);
     return (
-        
+
         <div className="list-group">
             <div className="card-item">
-                {products.map(product => (
-                    <Card
-                        style={{ 
-                            margin: '2px 10px 10px 10px', 
-                            display: 'flex', 
-                            flexDirection: 'column', 
-                            width: "45%", 
-                            flexWrap: 'wrap' ,
-                            fontSize:'1.5rem'
-                        }}
-                        key={product.id}
-                        size="small"
-                        hoverable
-                        cover={
-                            <img style={{ width: 150, }} alt="" src={product.image} />}
-                    >
+                {(filterProducts.length > 0) ? filterProducts.map((product, index) => (
+                    <div className="product-card" key={product.id} >
+                        <div className="product-img "><img style={{ width: "50%", }} alt="" src={product.image} /></div>
+                        <div className="product-text">
+                            <h3>{product.title}</h3>
+                            <p>{product.description}</p>
+                        </div>
+                    </div>
+                )) : products.map(product => (
+                    <div className="product-card" key={product.id} >
+                        <div className="product-img "><img style={{ width: "50%", }} alt="" src={product.image} /></div>
+                        <div className="product-text">
+                            <h3>{product.title}</h3>
+                            <p>{product.description}</p>
+                        </div>
+                    </div>
 
-                        <Meta  title={product.title} description={product.description}  />
-                    </Card>
-                ))}
+
+                )
+                )}
             </div>
 
         </div>
